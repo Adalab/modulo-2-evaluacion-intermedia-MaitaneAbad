@@ -6,18 +6,14 @@ const textTrack = document.querySelector(".js-textTrack");
 const button = document.querySelector(".js-button");
 const numberRandom = getRandomNumber();
 const numberAttempts = document.querySelector(".js-numberAttempts");
-let countClick = 0;
+let counter = 0;
+
 function getRandomNumber() {
   return Math.ceil(Math.random() * 100);
 }
-function addAttempts() {
-  countClick += 1;
-}
 
-function guessNumber(event) {
-  event.preventDefault();
+function compareNumbers() {
   const inputValue = parseInt(input.value);
-  console.log(numberRandom);
 
   if (inputValue === numberRandom) {
     textTrack.innerHTML = "Pista: ¡Has ganado Campeona!";
@@ -31,7 +27,18 @@ function guessNumber(event) {
   if (inputValue <= 0 || inputValue >= 100) {
     textTrack.innerHTML = "Pista: El número debe ser entre 1 y 100";
   }
+}
 
+function addAttempts() {
+  counter += 1;
+  numberAttempts.innerHTML = `Número de intentos: ${counter}`;
+}
+
+function guessNumber(event) {
+  event.preventDefault();
+  console.log(numberRandom);
+  
+  compareNumbers();
   addAttempts();
 }
 
