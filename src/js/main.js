@@ -11,12 +11,14 @@ function getRandomNumber() {
   return Math.ceil(Math.random() * 100);
 }
 
-function compareNumbers() {
+function winNumber() {
   const inputValue = parseInt(input.value);
-
   if (inputValue === numberRandom) {
     textTrack.innerHTML = 'Pista: ¡Has ganado Campeona!';
   }
+}
+function compareNumbers() {
+  const inputValue = parseInt(input.value);
   if (inputValue < numberRandom) {
     textTrack.innerHTML = 'Pista: Demasiado bajo';
   }
@@ -35,10 +37,9 @@ function addAttempts() {
 
 function guessNumber(event) {
   event.preventDefault();
-  console.log(numberRandom);
-
+  winNumber();
   compareNumbers();
   addAttempts();
 }
-
+console.log(numberRandom);
 button.addEventListener('click', guessNumber);
