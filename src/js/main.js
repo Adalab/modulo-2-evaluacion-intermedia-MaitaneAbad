@@ -27,6 +27,8 @@ function compareNumbers() {
   }
   if (inputValue <= 0 || inputValue >= 100) {
     textTrack.innerHTML = 'Pista: El número debe ser entre 1 y 100';
+  } else {
+    winNumber();
   }
 }
 
@@ -37,7 +39,6 @@ function addAttempts() {
 
 function guessNumber(event) {
   event.preventDefault();
-  winNumber();
   compareNumbers();
   addAttempts();
 }
