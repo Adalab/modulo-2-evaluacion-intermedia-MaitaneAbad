@@ -1,7 +1,6 @@
 'use strict';
 
 const input = document.querySelector('.js-input');
-const page = document.querySelector('.js-main');
 const textTrack = document.querySelector('.js-textTrack');
 const button = document.querySelector('.js-button');
 const numberRandom = getRandomNumber();
