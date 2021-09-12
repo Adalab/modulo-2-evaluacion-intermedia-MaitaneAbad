@@ -1,0 +1,26 @@
+.main {
+  .form {
+    .enterName {
+      display: block;
+      margin: 10px 0 10px 0;
+      font-size: 30px;
+      .input {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        height: 2vh;
+      }
+      .buttonNum {
+        display: block;
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+  .paragraphTrack {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  .paragraphNum {
+    font-size: 30px;
+    color: rgb(98, 114, 29);
+  }
+}
