@@ -8,10 +8,12 @@
     <title></title>
   </head>
 
-  <body>
-    <main class="main js-main">
+  <body class="body">
+    <header class="header">
       <h1>Adivina el número</h1>
-      <form method="">
+    </header>
+    <main class="main js-main">
+      <form class="form">
         <label class="enterName" for="enterName"
           >Introduce aquí el número:</label
         >
@@ -23,13 +25,13 @@
           placeholder=" Ej: 58"
           required
         />
-        <button class="button js-button">Prueba</button>
+        <button class="buttonNum js-button">Prueba</button>
       </form>
       <div>
-        <p class="js-textTrack">
+        <p class="paragraphTrack js-textTrack">
           Pista: Escribe el número y dale a <span>prueba</span>
         </p>
-        <p class="js-numberAttempts">Número de intentos: 0</p>
+        <p class="paragraphNum js-numberAttempts">Número de intentos: 0</p>
       </div>
     </main>
     <script src="./assets/js/main.js"></script>
